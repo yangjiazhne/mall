@@ -3,7 +3,14 @@ import App from './App.vue'
 import router from './router'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-import env from './env'
+
+// import env from './env'
+
+// mock开关
+const mock = false;
+if(mock){
+  require('./mock/api');
+}
 
 // 根据前端的跨域方式做调整 /a/b : /api/a/b => /a/b
 // axios.defaults.baseURL = 'https://www.easy-mock.com/mock/5dc7afee2b69d9223b633cbb/mimall';
